@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-Trace</title>
+    <style>
+        /* Стили сайта */
+        body {
+            background-color: #050a14; /* Темный фон */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Свечение сзади */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 150, 255, 0.15) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .card {
+            background-color: #0a1220;
+            border: 1px solid #1a3a5c;
+            border-radius: 20px;
+            padding: 30px 20px;
+            width: 85%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 150, 255, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .snowflake-box {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #1a3a5c;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            background: #0d1626;
+            box-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+        }
+
+        .snowflake-box svg {
+            width: 40px;
+            height: 40px;
+            fill: #4db8ff;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0 0 10px;
+            font-weight: 700;
+        }
+
+        p.subtitle {
+            color: #8899aa;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #0d1626;
+            border: 1px solid #1a3a5c;
+            color: #4db8ff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 10px rgba(0, 150, 255, 0.1);
+        }
+
+        .badge svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            fill: #4db8ff;
+        }
+
+        .btn {
+            display: block;
+            background-color: #0d1626;
+            border: 1px solid #2a5a8c;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(0, 150, 255, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            background-color: #142033;
+            box-shadow: 0 0 25px rgba(0, 150, 255, 0.4);
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #4db8ff;
+        }
+
+        .footer-text {
+            color: #556677;
+            font-size: 12px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .footer-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #4db8ff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #4db8ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Иконка снежинки -->
+        <div class="snowflake-box">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L13.09 8.26L19 6L13.09 15.74L12 22L10.91 15.74L5 18L10.91 8.26L12 2Z" opacity="0.8"/>
+                <path d="M12 2L13.09 8.26L19 6L13.09 15.74L12 22L10.91 15.74L5 18L10.91 8.26L12 2Z" fill="none" stroke="#4db8ff" stroke-width="1.5"/>
+                <path d="M12 2V22M2 12H22M4.93 4.93L19.07 19.07M19.07 4.93L4.93 19.07" stroke="#4db8ff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <h1>Zero-Trace</h1>
+        <p class="subtitle">Выбери нужный раздел ниже</p>
+
+        <div class="badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2Z"/><path d="M2 17L12 22L22 17"/><path d="M2 12L12 17L22 12"/></svg>
+            10000+ активных пользователей
+        </div>
+
+        <!-- Кнопка с твоей реферальной ссылкой -->
+        <a href="https://t.me/ZeroTraceSnosbot?start=ref_eKn3vXKA4fVy11yD0TvWsqQ" class="btn" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2Z"/><path d="M2 17L12 22L22 17"/><path d="M2 12L12 17L22 12"/></svg>
+            бот для сноса ❄️
+        </a>
+
+        <div class="footer-text">
+            <div class="footer-dot"></div>
+            Быстрый переход через Telegram
+        </div>
+    </div>
+
+</body>
+</html>
